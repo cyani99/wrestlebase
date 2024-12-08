@@ -3,8 +3,8 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
   const db = new PrismaClient();
-  const ppv = await db.pPV.findMany();
-  console.log(ppv);
+  const companies = await db.company.findMany();
+  console.log(companies);
 
-  return NextResponse.json(ppv);
+  return NextResponse.json(companies);
 }
